@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Entities/rain/rain-drop.gd" type="Script" id=1]
+[ext_resource path="res://Entities/rain/splash.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.11058, 3.02878 )
+
+[node name="rain-drop" type="RigidBody2D" groups=[
+"rain",
+]]
+gravity_scale = 16.0
+contacts_reported = 1
+contact_monitor = true
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+splash = ExtResource( 2 )
+
+[node name="shape" type="Polygon2D" parent="."]
+position = Vector2( -1.15932, -3.193 )
+scale = Vector2( 0.306865, 0.395515 )
+color = Color( 0.87451, 0.847059, 0.164706, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 8, 0, 16, 8, 16, 8, 8, 8, 0 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0662155, 0 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_raindrop_collide"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+rough = true
+bounce = 0.13
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 512, 16 )
+
+[node name="floor" type="StaticBody2D"]
+physics_material_override = SubResource( 1 )
+
+[node name="shape" type="Polygon2D" parent="."]
+color = Color( 0.407843, 0.0784314, 0.301961, 1 )
+polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 64, 0, 64 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( 512, 16 )
+shape = SubResource( 2 )
