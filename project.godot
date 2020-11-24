@@ -12,11 +12,13 @@ config_version=4
 
 config/name="Rain"
 run/main_scene="res://Scenes/main.tscn"
-config/icon="res://icon.png"
+boot_splash/bg_color=Color( 0.0745098, 0, 0.219608, 1 )
+config/icon="res://cafe-icon.png"
 
-[physics]
+[display]
 
-2d/physics_engine="GodotPhysics"
+window/size/width=1366
+window/size/height=768
 
 [rendering]
 
