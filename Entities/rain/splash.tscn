@@ -12,7 +12,7 @@ orbit_velocity_random = 0.0
 linear_accel = -6.9
 scale = 2.0
 scale_random = 0.2
-color = Color( 0.905882, 0.933333, 0.490196, 1 )
+color = Color( 0.0627451, 0.333333, 0.588235, 0.698039 )
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends Particles2D

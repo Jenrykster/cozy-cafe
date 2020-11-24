@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	$animator.play("idle")
+	$animator.play("iddle")
 	
 func pick_umbrella():
 	$animator.play("pick-umbrella")

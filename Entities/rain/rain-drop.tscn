@@ -20,7 +20,7 @@ splash = ExtResource( 2 )
 [node name="shape" type="Polygon2D" parent="."]
 position = Vector2( -1.15932, -3.193 )
 scale = Vector2( 0.306865, 0.395515 )
-color = Color( 0.87451, 0.847059, 0.164706, 1 )
+color = Color( 0.164706, 0.607843, 0.87451, 0.254902 )
 polygon = PoolVector2Array( 0, 0, 0, 8, 0, 16, 8, 16, 8, 8, 8, 0 )
 
 [node name="collision" type="CollisionShape2D" parent="."]
