@@ -21,7 +21,7 @@ position = Vector2( 508.866, -23.3643 )
 is_raining = false
 
 [node name="mik" parent="." instance=ExtResource( 1 )]
-position = Vector2( 259.547, 375.067 )
+position = Vector2( 562.795, 528.475 )
 
 [node name="CheckBox" type="CheckBox" parent="."]
 margin_left = 707.721

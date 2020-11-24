@@ -12,7 +12,7 @@
 [ext_resource path="res://Entities/people/mik.gd" type="Script" id=10]
 [ext_resource path="res://Entities/objects/umbrella.tscn" type="PackedScene" id=11]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=1]
 resource_name = "drop_umbrella"
 length = 4.0
 tracks/0/type = "value"
@@ -204,8 +204,7 @@ tracks/15/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "idle"
+[sub_resource type="Animation" id=2]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -279,8 +278,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5, 1 )
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "pick_umbrella"
+[sub_resource type="Animation" id=3]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/head:position")
@@ -471,7 +469,7 @@ tracks/15/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -650,7 +648,7 @@ position = Vector2( -0.668171, -1.11362 )
 script = ExtResource( 10 )
 
 [node name="r-arm" type="Sprite" parent="."]
-position = Vector2( 4.3501, -0.479636 )
+position = Vector2( 4.47681, -0.495476 )
 rotation = 0.568993
 texture = ExtResource( 4 )
 
@@ -659,8 +657,8 @@ position = Vector2( 8.41898, 2.87113 )
 texture = ExtResource( 7 )
 
 [node name="head" type="Sprite" parent="body"]
-position = Vector2( 4.21357, -2.86744 )
-rotation = -0.288221
+position = Vector2( 1.21018, 0.469662 )
+rotation = -0.0161169
 texture = ExtResource( 2 )
 
 [node name="tie" type="Sprite" parent="body/head"]
@@ -669,7 +667,7 @@ texture = ExtResource( 9 )
 
 [node name="r-foot" type="Sprite" parent="."]
 position = Vector2( 6.81505, 4.5132 )
-rotation = -0.0531288
+rotation = -0.0531289
 texture = ExtResource( 3 )
 
 [node name="r-leg" type="Sprite" parent="."]
@@ -688,27 +686,25 @@ rotation = -0.00357002
 texture = ExtResource( 6 )
 
 [node name="l-arm" type="Sprite" parent="."]
-position = Vector2( 11.9923, -16.7893 )
-rotation = -1.45892
+position = Vector2( 11.2249, 1.33052 )
 texture = ExtResource( 8 )
 
 [node name="umbrella" parent="l-arm" instance=ExtResource( 11 )]
 position = Vector2( 5.80957, 8.60655 )
-rotation = -4.86037
+rotation = -3.02225
 scale = Vector2( 0.563647, 0.7074 )
 
 [node name="sprite" parent="l-arm/umbrella" index="0"]
 position = Vector2( -1.615, -5.26083 )
 scale = Vector2( 1.94933, 1.3268 )
-frame = 2
 
 [node name="collider" parent="l-arm/umbrella/area" index="0"]
 position = Vector2( -1.76599, -13.3034 )
 
 [node name="animator" type="AnimationPlayer" parent="."]
-anims/drop_umbrella = SubResource( 4 )
-anims/idle = SubResource( 1 )
-anims/pick_umbrella = SubResource( 2 )
-anims/walk = SubResource( 3 )
+anims/drop_umbrella = SubResource( 1 )
+anims/idle = SubResource( 2 )
+anims/pick_umbrella = SubResource( 3 )
+anims/walk = SubResource( 4 )
 
 [editable path="l-arm/umbrella"]
