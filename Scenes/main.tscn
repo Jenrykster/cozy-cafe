@@ -24,13 +24,18 @@ is_raining = false
 position = Vector2( 562.795, 528.475 )
 
 [node name="CheckBox" type="CheckBox" parent="."]
-margin_left = 707.721
-margin_top = 247.914
-margin_right = 731.721
-margin_bottom = 271.914
+margin_left = 574.237
+margin_top = 389.407
+margin_right = 634.237
+margin_bottom = 413.407
 text = "RAIN"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 614.026, 459.185 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
 
 [connection signal="toggled" from="CheckBox" to="cloud" method="_on_CheckBox_toggled"]

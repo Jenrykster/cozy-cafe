@@ -1,19 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Assets/umbrella.png" type="Texture" id=1]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 47.9447, 3.74535 )
 
 [node name="umbrella" type="Node2D"]
 
 [node name="sprite" type="Sprite" parent="."]
+position = Vector2( -3.37119, 42.3272 )
 texture = ExtResource( 1 )
+offset = Vector2( 2.14998, -24.6427 )
 hframes = 3
+frame = 2
 
 [node name="area" type="KinematicBody2D" parent="."]
-position = Vector2( 0.471924, -15.5739 )
 
-[node name="collider" type="CollisionShape2D" parent="area"]
-position = Vector2( 0.471939, -16.0459 )
-shape = SubResource( 1 )
+[node name="collider" type="CollisionPolygon2D" parent="area"]
+polygon = PoolVector2Array( -1.8689, -6.43596, 6.9744, -4.60056, 17.1526, 0.905663, 23.3262, 8.41413, 25.829, 12.5855, 24.661, 15.5889, 11.6463, 18.7591, -8.37625, 19.0929, -21.5578, 17.4243, -27.2309, 14.2541, -32.2365, 10.7501, -23.3932, 3.7422, -14.8836, -1.26345, -5.37286, -5.43483 )
